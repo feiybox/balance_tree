@@ -84,7 +84,7 @@ func balance(root *TreeNode) *TreeNode {
 	l := GetHeight(root.left)
 	r := GetHeight(root.right)
 	if l > r+1 {
-		// 左边高度大于右边+1，则需要左旋
+		// 左边高度大于右边+1，则需要右旋
 		ll := GetHeight(root.left.left)
 		lr := GetHeight(root.left.right)
 		if ll > lr {
@@ -114,7 +114,7 @@ func updateNodeDep(root *TreeNode) {
 	root.Dep = dep + 1
 }
 
-// 插入的节点是左孩子的左子树（左旋）
+// 插入的节点是左孩子的左子树（右旋）
 func llRotate(node *TreeNode) *TreeNode {
 	leftNode := node.left
 	node.left = leftNode.right
@@ -122,7 +122,7 @@ func llRotate(node *TreeNode) *TreeNode {
 	return leftNode
 }
 
-// 插入的节点是右孩子的右子树（右旋）
+// 插入的节点是右孩子的右子树（左旋）
 func rrRotate(node *TreeNode) *TreeNode {
 	rightNode := node.right
 	node.right = rightNode.left
