@@ -19,7 +19,7 @@ func BSFPrint(root *TwoThreeTreeNode) []*TwoThreeTreeNode {
 	return nodeList
 }
 
-// 查找2-3树节点
+// Find 查找2-3树节点
 func Find(root *TwoThreeTreeNode, val int) *TwoThreeTreeNode {
 	if root == nil {
 		return nil
@@ -45,7 +45,7 @@ func Find(root *TwoThreeTreeNode, val int) *TwoThreeTreeNode {
 	return Find(root.nodes[flag], val)
 }
 
-// 向2-3树中添加节点
+// AddNode 向2-3树中添加节点
 func AddNode(root *TwoThreeTreeNode, val int) *TwoThreeTreeNode {
 	if root == nil {
 		return &TwoThreeTreeNode{
@@ -123,7 +123,7 @@ func addNode(root *TwoThreeTreeNode, val int) {
 	return
 }
 
-// 删除2-3树中的节点
+// DelNode 删除2-3树中的节点
 func DelNode(root *TwoThreeTreeNode, val int) *TwoThreeTreeNode {
 	// 暂未实现
 	return nil

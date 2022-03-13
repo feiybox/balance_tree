@@ -7,7 +7,7 @@ type TreeNode struct {
 	right *TreeNode
 }
 
-// 找到某个数
+// Find 找到某个数
 // 找到则返回对应的节点，如果找不到则返回nil
 func Find(root *TreeNode, val int) *TreeNode {
 	if root == nil {
@@ -23,7 +23,7 @@ func Find(root *TreeNode, val int) *TreeNode {
 	return Find(root.right, val)
 }
 
-// 获取二叉树的高度
+// GetHeight 获取二叉树的高度
 func GetHeight(node *TreeNode) int {
 	if node == nil {
 		return 0
@@ -31,7 +31,7 @@ func GetHeight(node *TreeNode) int {
 	return node.Dep
 }
 
-// 广度优先遍历
+// BFSPrint 广度优先遍历
 func BFSPrint(root *TreeNode) []*TreeNode {
 	nodeList := make([]*TreeNode, 0, 10)
 	nodeList = append(nodeList, root)
@@ -47,7 +47,7 @@ func BFSPrint(root *TreeNode) []*TreeNode {
 	return nodeList
 }
 
-// 将一个节点加入到AVL树中
+// AddNode 将一个节点加入到AVL树中
 // 返回新的跟节点
 func AddNode(root *TreeNode, val int) *TreeNode {
 	if root == nil {
@@ -142,7 +142,7 @@ func rlRotate(node *TreeNode) *TreeNode {
 	return rrRotate(node)
 }
 
-// 删除对应数据的节点，返回最新二叉树的根
+// DelNode 删除对应数据的节点，返回最新二叉树的根
 func DelNode(root *TreeNode, val int) *TreeNode {
 	if root == nil {
 		return nil

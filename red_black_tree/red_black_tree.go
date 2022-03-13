@@ -8,7 +8,7 @@ type RBTreeNode struct {
 	parent *RBTreeNode
 }
 
-// 查找树上的节点
+// Find 查找树上的节点
 func Find(root *RBTreeNode, val int) *RBTreeNode {
 	if root == nil {
 		return nil
@@ -35,7 +35,7 @@ func BFSPrint(root *RBTreeNode) []*RBTreeNode {
 	return nodeList
 }
 
-// 增加节点
+// AddNode 增加节点
 func AddNode(root *RBTreeNode, val int) *RBTreeNode {
 	// if root is nil, init root and set color black
 	if root == nil {
